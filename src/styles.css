@@ -417,6 +417,8 @@ a:focus-visible,
   margin-top: 2rem;
 }
 .product-card {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
 }
 .product-image {
@@ -448,6 +450,8 @@ a:focus-visible,
   text-transform: uppercase;
 }
 .product-details {
+  flex: 1;
+  min-width: 0;
   padding-top: 1.15rem;
 }
 .product-category {
@@ -458,17 +462,18 @@ a:focus-visible,
   text-transform: uppercase;
 }
 .product-title-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: start;
-  justify-content: space-between;
   gap: 0.8rem;
   margin-top: 0.45rem;
 }
 .product-title-row h3 {
+  min-width: 0;
   font-size: clamp(1.3rem, 1.8vw, 1.65rem);
+  overflow-wrap: anywhere;
 }
 .product-title-row b {
-  flex-shrink: 0;
   padding-top: 0.25rem;
   font-size: 0.78rem;
   font-weight: 650;
@@ -580,8 +585,7 @@ a:focus-visible,
 .highlights article {
   min-width: 0;
   min-height: 13rem;
-  display: flex;
-  gap: 1.25rem;
+  display: block;
   padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 3rem);
   border-right: 1px solid var(--border);
 }
@@ -592,12 +596,6 @@ a:focus-visible,
   padding-right: 0;
   border-right: 0;
 }
-.highlights article > span {
-  color: var(--accent);
-  font-size: 0.68rem;
-  font-weight: 750;
-  letter-spacing: 0.1em;
-}
 .highlights h2 {
   font-family: var(--font-body);
   font-size: 0.9rem;
@@ -605,6 +603,7 @@ a:focus-visible,
   letter-spacing: 0.08em;
   line-height: 1.2;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 .highlights p {
   max-width: 18rem;
