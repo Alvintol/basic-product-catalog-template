@@ -22,9 +22,8 @@ export const App = ({ client, theme }: { client: ClientConfig; theme: Theme }) =
       <ProductCatalogue catalogue={client.catalogue} ui={client.ui} />
       {client.story && <Story story={client.story} />}
       <section className="highlights container" aria-label="Store information">
-        {client.highlights.map((item, index) => (
+        {client.highlights.map((item) => (
           <article key={item.title}>
-            <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
             <div><h2>{item.title}</h2><p>{item.description}</p></div>
           </article>
         ))}

@@ -19,7 +19,6 @@ export const Hero = ({ hero }: { hero: ClientConfig['hero'] }) => (
     <figure className="hero-product">
       <div className="hero-image">
         <Photo image={hero.image} priority />
-        <span className="hero-image-index" aria-hidden="true">01</span>
       </div>
       <figcaption>
         <span>{hero.featuredLabel}</span>
